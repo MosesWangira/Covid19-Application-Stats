@@ -17,5 +17,5 @@ data class DataClassItem (
 
     val continent: String,
 
-    val countryInfo: CountryInfo
+//    val countryInfo: CountryInfo
 )

@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.covid19statsapp.R
 import com.example.covid19statsapp.data.model.CountryInfo
 import com.example.covid19statsapp.data.model.DataClassItem
@@ -40,7 +41,13 @@ class RegionAdapter(val items: List<DataClassItem>) :
 
         holder.view.criticalCases.text = statistics.critical.toString()
 
-
+//        val urlFlag = statistics.countryInfo.flag
+//        Glide
+//            .with(holder.view.context)
+//            .load(urlFlag)
+//            .centerCrop()
+//            .placeholder(R.drawable.global)
+//            .into(holder.view.countryImage)
 
         /**
          * Change date updated to formatted string

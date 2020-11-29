@@ -21,6 +21,7 @@ import com.example.covid19statsapp.util.isNetworkAvailable
 import com.example.covid19statsapp.util.snackbar
 import com.example.covid19statsapp.util.toast
 import kotlinx.android.synthetic.main.fragment_regions.*
+import kotlinx.android.synthetic.main.recycler_item.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -178,12 +179,14 @@ class Regions : Fragment() {
                             val tested = stats.elementAt(x).tests
                             val date = stats.elementAt(x).updated
                             val continent = stats.elementAt(x).continent
-                            val countryImage = stats.elementAt(x).countryInfo
+//                            val countryImage = stats.elementAt(x).countryInfo
+
 
                             val filter = DataClassItem(
                                 country, totalCases, totalRecoveries, totalDeaths,
                                 todayCases, todayRecoveries, todayDeaths,
-                                critical, tested, date, continent, countryImage
+                                critical, tested, date, continent
+//                                , countryImage
                             )
 
                             filteredList.add(filter)
