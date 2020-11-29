@@ -1,3 +1,67 @@
 <resources>
     <string name="app_name">Covid 19 Stats App</string>
+
+    <string name="splashimage">splashImage</string>
+    <string name="corona_virus_statistics">COVID\-19 UPDATE\nSTATISTICS</string>
+    <string name="splashdescription">splashDescription</string>
+    <string name="summary">Summary</string>
+    <string name="regions">Countries</string>
+    <string name="preventions">Preventions</string>
+    <string name="developer">Developer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="countryName">KENYA</string>
+    <string name="total_recoveries">Total Recoveries</string>
+    <string name="today_cases">Today Cases</string>
+    <string name="today_recoveries">Today Recoveries</string>
+    <string name="today_deaths">Today Deaths</string>
+    <string name="critical_cases">Critical Cases</string>
+    <string name="date_updated">Date Updated</string>
+    <string name="number_holder">1500</string>
+    <string name="total_tests">Total Tested</string>
+    <string name="wash_hands">Regularly and thoroughly clean your hands with an alcohol-based hand
+        rub or wash them with soap and water. Why? Washing your hands with soap and water or using
+        alcohol-based hand rub kills viruses that may be on your hands.
+    </string>
+    <string name="wear_mask">Masks can help prevent the spread of the virus from the person
+        wearing the mask to others. Masks alone do not protect against COVID\-19, and should be
+        combined with physical distancing and hand hygiene.
+    </string>
+    <string name="elbow_cough">Make sure you, and the people around you, follow good respiratory
+        hygiene. This means covering your mouth and nose with your bent elbow or tissue when you
+        cough or sneeze. Then dispose of the used tissue immediately and wash your hands. Why?
+        Droplets spread virus. By following good respiratory hygiene, you protect the people around
+        you from viruses such as cold, flu and COVID\-19.
+    </string>
+    <string name="social_distance">Maintain at least 1 metre \(3 feet\) distance between yourself and
+        others. Why? When someone coughs, sneezes, or speaks they spray small liquid droplets from
+        their nose or mouth which may contain virus. If you are too close, you can breathe in the
+        droplets, including the COVID\-19 virus if the person has the disease.
+    </string>
+    <string name="hospital">If you have a fever, cough and difficulty breathing, seek medical
+        attention, but call by telephone in advance if possible and follow the directions of your
+        local health authority. Why? National and local authorities will have the most up to date
+        information on the situation in your area. Calling in advance will allow your health care
+        provider to quickly direct you to the right health facility. This will also protect you and
+        help prevent spread of viruses and other infections.
+    </string>
+    <string name="trends">Keep up to date on the latest information from trusted sources, such as
+        WHO or your local and national health authorities. Why? Local and national authorities are
+        best placed to advise on what people in your area should be doing to protect themselves.
+    </string>
+    <string name="search">Search</string>
+    <string name="total_recovered">Total Recovered</string>
+    <string name="total_cases">Total Cases</string>
+    <string name="world">World</string>
+    <string name="africa">Africa</string>
+    <string name="total_deaths">Total Deaths</string>
+    <string name="kenya">Kenya</string>
+    <string name="no_internet_connection_available">No Internet Connection Available</string>
+    <string name="connect_to_internet_to_get_updates">Connect To Internet To Get Updates</string>
+    <string name="refresh">Refresh</string>
+    <string name="developerimage">developerImage</string>
+    <string name="github">Github</string>
+    <string name="medium">Medium</string>
+    <string name="gmail">Gmail</string>
+    <string name="linkedIn">LinkedIn</string>
 </resources>
