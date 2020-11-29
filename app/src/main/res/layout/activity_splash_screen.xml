@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools">
+
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/splashimage"
     tools:context=".ui.activities.SplashScreen">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/splashText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_above="@id/splashImage"
+        android:text="@string/corona_virus_statistics"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        />
+
+    <ImageView
+        android:id="@+id/splashImage"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/splashimage"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/coronavirus"
+        app:tint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/splashDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:layout_below="@id/splashImage"
+        android:text="@string/splashdescription"
+        android:textSize="12sp"
+        />
+
+</RelativeLayout>
+</layout>

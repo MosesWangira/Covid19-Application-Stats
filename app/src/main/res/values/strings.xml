@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Covid 19 Stats App</string>
+    <string name="app_name">Covid19 Stats</string>
 
     <string name="splashimage">splashImage</string>
     <string name="corona_virus_statistics">COVID\-19 UPDATE\nSTATISTICS</string>
