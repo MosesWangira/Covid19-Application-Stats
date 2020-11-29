@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.covid19statsapp.R
 import com.example.covid19statsapp.data.model.DataClassItem
+import com.example.covid19statsapp.util.convertMillisToFormattedDate
 import kotlinx.android.synthetic.main.recycler_item.view.*
 
 class RegionAdapter(val items: List<DataClassItem>) :
@@ -42,7 +43,9 @@ class RegionAdapter(val items: List<DataClassItem>) :
          * */
         val timeUpdated = statistics.updated
 
-        holder.view.dateUpdated.text = statistics.updated.toString()
+        val convertedDate = convertMillisToFormattedDate(timeUpdated)
+
+        holder.view.dateUpdated.text = convertedDate
     }
 
 

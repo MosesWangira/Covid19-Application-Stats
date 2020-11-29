@@ -1,8 +1,13 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.covid19statsapp.ui.fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.*
+import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import android.widget.ImageView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.daasuu.cat.CountAnimationTextView
@@ -21,6 +26,12 @@ class Summary : Fragment() {
 
     lateinit var binding: FragmentSummaryBinding
 
+    lateinit var rotate: Animation
+
+    lateinit var globalAnimation: ImageView
+    lateinit var africaAnimation: ImageView
+    lateinit var kenyaAnimation: ImageView
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,6 +42,21 @@ class Summary : Fragment() {
             inflater,
             R.layout.fragment_summary, container, false
         )
+
+        rotate = AnimationUtils.loadAnimation(requireContext(), R.anim.rotate)
+
+        globalAnimation = binding.globalLoading
+        africaAnimation = binding.africaLoading
+        kenyaAnimation = binding.kenyaLoading
+
+        if(isNetworkAvailable(requireContext())){
+            globalAnimation.startAnimation(rotate)
+            africaAnimation.startAnimation(rotate)
+            kenyaAnimation.startAnimation(rotate)
+        }
+        else{
+            requireContext().toast("No Internet Connection")
+        }
 
         animateHomeViews()
 
@@ -73,8 +99,10 @@ class Summary : Fragment() {
         val fetchingGloabalStatistics = RetrofitBuilder.apiService.getGlobalStatistics()
 
         fetchingGloabalStatistics.enqueue(object : Callback<GlobalDataClass> {
+            @SuppressLint("UseCompatLoadingForDrawables")
             override fun onFailure(call: Call<GlobalDataClass>, t: Throwable) {
-
+                globalAnimation.clearAnimation()
+                globalAnimation.setImageDrawable(resources.getDrawable(R.drawable.no_wifi))
             }
 
             override fun onResponse(
@@ -82,6 +110,8 @@ class Summary : Fragment() {
                 response: Response<GlobalDataClass>
             ) {
                 if (response.isSuccessful) {
+                    globalAnimation.clearAnimation()
+                    globalAnimation.visibility = View.GONE
                     val globalStats = response.body()!!
 
                     val globalTotalCases = globalStats.cases
@@ -124,15 +154,18 @@ class Summary : Fragment() {
 
         fetchingStatistics.enqueue(object : Callback<MutableList<DataClassItem>> {
 
+            @SuppressLint("UseCompatLoadingForDrawables")
             override fun onFailure(call: Call<MutableList<DataClassItem>>, t: Throwable) {
-//                Toast.makeText(requireContext(), t.message, Toast.LENGTH_LONG).show()
-            }
+                africaAnimation.clearAnimation()
+                africaAnimation.setImageDrawable(resources.getDrawable(R.drawable.no_wifi))            }
 
             override fun onResponse(
                 call: Call<MutableList<DataClassItem>>,
                 response: Response<MutableList<DataClassItem>>
             ) {
                 if (response.isSuccessful) {
+                    africaAnimation.clearAnimation()
+                    africaAnimation.visibility = View.GONE
                     val stats = response.body()!!
 
                     val listSize = stats.size
@@ -209,8 +242,10 @@ class Summary : Fragment() {
 
         fetchingStatistics.enqueue(object : Callback<MutableList<DataClassItem>> {
 
+            @SuppressLint("UseCompatLoadingForDrawables")
             override fun onFailure(call: Call<MutableList<DataClassItem>>, t: Throwable) {
-//                Toast.makeText(requireContext(), t.message, Toast.LENGTH_LONG).show()
+                kenyaAnimation.clearAnimation()
+                kenyaAnimation.setImageDrawable(resources.getDrawable(R.drawable.no_wifi))
             }
 
             override fun onResponse(
@@ -218,6 +253,8 @@ class Summary : Fragment() {
                 response: Response<MutableList<DataClassItem>>
             ) {
                 if (response.isSuccessful) {
+                    kenyaAnimation.clearAnimation()
+                    kenyaAnimation.visibility = View.GONE
                     val stats = response.body()!!
 
                     val listSize = stats.size

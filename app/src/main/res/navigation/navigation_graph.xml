@@ -8,21 +8,21 @@
     <fragment
         android:id="@+id/summary"
         android:name="com.example.covid19statsapp.ui.fragments.Summary"
-        android:label="fragment_summary"
+        android:label="Summary"
         tools:layout="@layout/fragment_summary" />
     <fragment
         android:id="@+id/developer"
         android:name="com.example.covid19statsapp.ui.fragments.Developer"
-        android:label="fragment_developer"
+        android:label="Developer"
         tools:layout="@layout/fragment_developer" />
     <fragment
         android:id="@+id/prevention"
         android:name="com.example.covid19statsapp.ui.fragments.Prevention"
-        android:label="fragment_prevention"
+        android:label="Prevention"
         tools:layout="@layout/fragment_prevention" />
     <fragment
         android:id="@+id/regions"
         android:name="com.example.covid19statsapp.ui.fragments.Regions"
-        android:label="fragment_regions"
+        android:label="Region"
         tools:layout="@layout/fragment_regions" />
 </navigation>

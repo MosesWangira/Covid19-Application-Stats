@@ -1,11 +1,14 @@
 package com.example.covid19statsapp.ui.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
+import android.view.animation.Animation
 import androidx.fragment.app.Fragment
 import android.view.animation.AnimationUtils
 import android.view.animation.LayoutAnimationController
 import android.view.inputmethod.EditorInfo
+import android.widget.ImageView
 import androidx.appcompat.widget.SearchView
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,12 +24,16 @@ import kotlinx.android.synthetic.main.fragment_regions.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.lang.Exception
 
 class Regions : Fragment() {
 
     lateinit var binding: FragmentRegionsBinding
 
     lateinit var emptyView: View
+
+    lateinit var rotate: Animation
+    lateinit var loading: ImageView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,6 +46,16 @@ class Regions : Fragment() {
 
         emptyView = binding.emptyView
 
+        loading = binding.regionLoad
+        loading.visibility = View.GONE
+        rotate = AnimationUtils.loadAnimation(requireContext(), R.anim.rotate)
+
+        if(isNetworkAvailable(requireContext())){
+            emptyView.visibility = View.GONE
+            loading.visibility = View.VISIBLE
+            loading.startAnimation(rotate)
+        }
+
         fetchStatistics()
 
         binding.refreshImage.setOnClickListener {
@@ -47,6 +64,9 @@ class Regions : Fragment() {
             }
             else{
                 it.snackbar("Loading")
+                loading.visibility = View.VISIBLE
+                loading.startAnimation(rotate)
+                emptyView.visibility = View.GONE
                 fetchStatistics()
             }
         }
@@ -62,7 +82,8 @@ class Regions : Fragment() {
         fetchingStatistics.enqueue(object : Callback<MutableList<DataClassItem>> {
 
             override fun onFailure(call: Call<MutableList<DataClassItem>>, t: Throwable) {
-                requireContext().toast("Failed to retrieve data. Refresh")
+                loading.visibility = View.GONE
+                emptyView.visibility = View.VISIBLE
             }
 
             override fun onResponse(
@@ -70,13 +91,13 @@ class Regions : Fragment() {
                 response: Response<MutableList<DataClassItem>>
             ) {
                 if (response.isSuccessful) {
+                    loading.clearAnimation()
+                    loading.visibility = View.GONE
                     val stats = response.body()
                     stats?.let {
                         emptyView.visibility = View.GONE
                         showStatistics(it)
                     }
-                } else {
-                    emptyView.visibility = View.VISIBLE
                 }
             }
 
@@ -85,14 +106,18 @@ class Regions : Fragment() {
     }
 
     private fun showStatistics(stats: MutableList<DataClassItem>) {
-        recyclerViewDisplay.layoutManager = LinearLayoutManager(context)
-        recyclerViewDisplay.hasFixedSize()
-        recyclerViewDisplay.adapter = RegionAdapter(stats)
+        try {
+            recyclerViewDisplay.layoutManager = LinearLayoutManager(requireContext())
+            recyclerViewDisplay.hasFixedSize()
+            recyclerViewDisplay.adapter = RegionAdapter(stats)
 
-        val resId: Int = R.anim.layout_animation_fall_down
-        val animation: LayoutAnimationController =
-            AnimationUtils.loadLayoutAnimation(requireContext(), resId)
-        recyclerViewDisplay.layoutAnimation = animation
+            val resId: Int = R.anim.layout_animation_fall_down
+            val animation: LayoutAnimationController =
+                AnimationUtils.loadLayoutAnimation(requireContext(), resId)
+            recyclerViewDisplay.layoutAnimation = animation
+        }catch (e: Exception){
+            Log.d("Null recycler Item", "crash caused by null exception on recycler view")
+        }
     }
 
 
@@ -160,10 +185,13 @@ class Regions : Fragment() {
                                 critical, tested, date, continent
                             )
 
-
                             filteredList.add(filter)
 
-                            recyclerViewDisplay.adapter = RegionAdapter(filteredList)
+                            try {
+                                recyclerViewDisplay.adapter = RegionAdapter(filteredList)
+                            }catch (e: Exception){
+                                Log.d("Null recycler Item", "crash caused by null exception on recycler view")
+                            }
                         }
                     }
                 }
