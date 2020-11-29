@@ -4,6 +4,5 @@ It displays a summary of the statistics i.e World, Africa and Kenya. It also pro
 <br>
 <br>
 <br>
+![2d427d8d-1d3e-4533-8a73-f3f2c41a1113](https://user-images.githubusercontent.com/40572173/100549350-88abd800-3283-11eb-84f7-3fdce79caba8.png)
 
-
-![splash 1](https://user-images.githubusercontent.com/40572173/100548877-7d0ae200-3280-11eb-9b2e-60b31d8dbe80.png)
