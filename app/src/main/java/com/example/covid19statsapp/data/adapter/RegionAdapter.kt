@@ -5,12 +5,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.covid19statsapp.R
+import com.example.covid19statsapp.data.model.CountryInfo
 import com.example.covid19statsapp.data.model.DataClassItem
 import com.example.covid19statsapp.util.convertMillisToFormattedDate
 import kotlinx.android.synthetic.main.recycler_item.view.*
 
 class RegionAdapter(val items: List<DataClassItem>) :
     RecyclerView.Adapter<RegionAdapter.StatisticsViewHolder>() {
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = StatisticsViewHolder(
         LayoutInflater.from(parent.context).inflate(
@@ -38,6 +40,8 @@ class RegionAdapter(val items: List<DataClassItem>) :
 
         holder.view.criticalCases.text = statistics.critical.toString()
 
+
+
         /**
          * Change date updated to formatted string
          * */
@@ -46,6 +50,11 @@ class RegionAdapter(val items: List<DataClassItem>) :
         val convertedDate = convertMillisToFormattedDate(timeUpdated)
 
         holder.view.dateUpdated.text = convertedDate
+
+        /**
+         * Add country flag
+         * */
+
     }
 
 

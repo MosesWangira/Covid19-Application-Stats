@@ -178,11 +178,12 @@ class Regions : Fragment() {
                             val tested = stats.elementAt(x).tests
                             val date = stats.elementAt(x).updated
                             val continent = stats.elementAt(x).continent
+                            val countryImage = stats.elementAt(x).countryInfo
 
                             val filter = DataClassItem(
                                 country, totalCases, totalRecoveries, totalDeaths,
                                 todayCases, todayRecoveries, todayDeaths,
-                                critical, tested, date, continent
+                                critical, tested, date, continent, countryImage
                             )
 
                             filteredList.add(filter)

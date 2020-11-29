@@ -15,5 +15,7 @@ data class DataClassItem (
     val tests: Int,
     val updated: Long,
 
-    val continent: String
+    val continent: String,
+
+    val countryInfo: CountryInfo
 )
