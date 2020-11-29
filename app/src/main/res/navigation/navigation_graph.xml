@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/summary">
+
+    <fragment
+        android:id="@+id/summary"
+        android:name="com.example.covid19statsapp.ui.fragments.Summary"
+        android:label="fragment_summary"
+        tools:layout="@layout/fragment_summary" />
+    <fragment
+        android:id="@+id/developer"
+        android:name="com.example.covid19statsapp.ui.fragments.Developer"
+        android:label="fragment_developer"
+        tools:layout="@layout/fragment_developer" />
+    <fragment
+        android:id="@+id/prevention"
+        android:name="com.example.covid19statsapp.ui.fragments.Prevention"
+        android:label="fragment_prevention"
+        tools:layout="@layout/fragment_prevention" />
+    <fragment
+        android:id="@+id/regions"
+        android:name="com.example.covid19statsapp.ui.fragments.Regions"
+        android:label="fragment_regions"
+        tools:layout="@layout/fragment_regions" />
+</navigation>

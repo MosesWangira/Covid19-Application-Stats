@@ -5,7 +5,7 @@
 
     <group android:checkableBehavior="none">
         <item
-            android:id="@+id/fragmentSummary"
+            android:id="@+id/summary"
             android:enabled="true"
             android:icon="@drawable/summation"
             android:title="@string/summary"
