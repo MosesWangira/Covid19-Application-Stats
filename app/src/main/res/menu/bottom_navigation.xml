@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/fragmentSummary"
+            android:enabled="true"
+            android:icon="@drawable/summation"
+            android:title="@string/summary"
+            android:tooltipText="@string/summary"
+            app:labelVisibilityMode="auto"
+            tools:targetApi="o" />
+
+        <item
+            android:id="@+id/regions"
+            android:enabled="true"
+            android:icon="@drawable/countries_ic"
+            android:title="@string/regions"
+            android:tooltipText="@string/regions"
+            app:labelVisibilityMode="auto"
+            tools:targetApi="o" />
+
+        <item
+            android:id="@+id/prevention"
+            android:enabled="true"
+            android:icon="@drawable/prevention_ic"
+            android:title="@string/preventions"
+            android:tooltipText="@string/preventions"
+            app:labelVisibilityMode="auto"
+            tools:targetApi="o" />
+
+        <item
+            android:id="@+id/developer"
+            android:enabled="true"
+            android:icon="@drawable/developer_ic"
+            android:title="@string/developer"
+            android:tooltipText="@string/developer"
+            app:labelVisibilityMode="auto"
+            tools:targetApi="o" />
+
+    </group>
+
+</menu>
