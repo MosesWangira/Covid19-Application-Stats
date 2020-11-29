@@ -1,14 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.fragments.Regions">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/regionbg"
+        tools:context=".ui.fragments.Regions">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/regionLoad"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/loading"
+            app:tint="@color/colorPrimary" />
+
+        <!-- Empty view for the list -->
+        <RelativeLayout
+            android:id="@+id/empty_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/empty_shelter_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/no_wifi" />
+
+            <TextView
+                android:id="@+id/empty_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/empty_shelter_image"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="16dp"
+                android:text="@string/no_internet_connection_available"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/empty_subtitle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/empty_title_text"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif"
+                android:paddingTop="8dp"
+                android:text="@string/connect_to_internet_to_get_updates"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#A2AAB0" />
+
+            <TextView
+                android:id="@+id/refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/empty_subtitle_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif"
+                android:paddingTop="8dp"
+                android:text="@string/refresh"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@android:color/holo_blue_dark" />
+
+            <ImageView
+                android:id="@+id/refresh_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/refresh"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/refresh" />
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+</layout>

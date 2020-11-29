@@ -1,14 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools">
+
+
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="50dp"
+    android:orientation="vertical"
+    android:background="@drawable/lastbg"
     tools:context=".ui.fragments.Prevention">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/handWash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/elavation_background"
+                android:elevation="5dp"
+                android:minHeight="100dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                tools:targetApi="lollipop">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:src="@drawable/washhands"
+                    tools:ignore="ContentDescription,NestedWeights" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="3"
+                    android:padding="5dp"
+                    android:text="@string/wash_hands"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/mask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/elavation_background"
+                android:elevation="5dp"
+                android:minHeight="100dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                tools:targetApi="lollipop">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="3"
+                    android:padding="5dp"
+                    android:text="@string/wear_mask"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:src="@drawable/people"
+                    tools:ignore="ContentDescription,NestedWeights" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/elbowCough"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/elavation_background"
+                android:elevation="5dp"
+                android:minHeight="100dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                tools:targetApi="lollipop">
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:src="@drawable/sneeze" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:layout_weight="3"
+                    android:padding="5dp"
+                    android:text="@string/elbow_cough"
+                    android:textSize="12sp"
+                    tools:ignore="NestedWeights" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/socialDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/elavation_background"
+                android:elevation="5dp"
+                android:minHeight="100dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                tools:targetApi="lollipop">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="3"
+                    android:padding="5dp"
+                    android:text="@string/social_distance"
+                    android:textSize="12sp"
+                    tools:ignore="NestedWeights" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:src="@drawable/socialdistance" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/toHospital"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/elavation_background"
+                android:elevation="5dp"
+                android:minHeight="100dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:src="@drawable/hospital" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:layout_weight="3"
+                    android:padding="5dp"
+                    android:text="@string/hospital"
+                    android:textSize="12sp"
+                    tools:ignore="NestedWeights" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/upDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/elavation_background"
+                android:elevation="5dp"
+                android:minHeight="100dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                tools:targetApi="lollipop">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="3"
+                    android:padding="5dp"
+                    android:text="@string/trends"
+                    android:textSize="12sp"
+                    tools:ignore="NestedWeights" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:src="@drawable/datatrend"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+</layout>

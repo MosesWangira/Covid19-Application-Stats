@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/elavation_background"
+    android:elevation="8dp"
+    android:orientation="vertical"
+    android:weightSum="2.5"
+    tools:targetApi="lollipop">
+
+    <TextView
+        android:id="@+id/country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5sp"
+        android:background="@drawable/elavation_background"
+        android:elevation="1dp"
+        android:gravity="center"
+        android:text="@string/countryName"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="@string/total_cases"
+                style="@style/textviewheading" />
+
+            <TextView
+                android:id="@+id/totalCases"
+                android:text="@string/number_holder"
+                style="@style/textviewdescription" />
+
+            <TextView
+                android:text="@string/total_recoveries"
+                style="@style/textviewheading"/>
+
+            <TextView
+                android:id="@+id/totalRecoveries"
+                android:text="@string/number_holder"
+                style="@style/textviewdescription" />
+
+            <TextView
+                android:text="@string/total_deaths"
+                style="@style/textviewheading"/>
+
+            <TextView
+                android:id="@+id/totalDeaths"
+                android:text="@string/number_holder"
+                style="@style/textviewdescription" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="@string/today_cases"
+                style="@style/textviewheading" />
+
+            <TextView
+                android:id="@+id/todayCases"
+                android:text="@string/number_holder"
+                style="@style/textviewdescription"/>
+
+            <TextView
+                android:text="@string/today_recoveries"
+                style="@style/textviewheading"/>
+
+            <TextView
+                android:id="@+id/todayRecoveries"
+                android:text="@string/number_holder"
+                style="@style/textviewdescription" />
+
+            <TextView
+                android:text="@string/today_deaths"
+                style="@style/textviewheading" />
+
+            <TextView
+                android:id="@+id/todayDeaths"
+                android:text="@string/number_holder"
+                style="@style/textviewdescription" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="@string/critical_cases"
+                style="@style/textviewheading"/>
+
+            <TextView
+                android:id="@+id/criticalCases"
+                android:text="@string/number_holder"
+                style="@style/textviewdescription"/>
+
+            <TextView
+                android:text="@string/total_tests"
+                style="@style/textviewheading"/>
+
+            <TextView
+                android:id="@+id/totalTests"
+                android:text="@string/number_holder"
+                style="@style/textviewdescription"/>
+
+            <TextView
+                android:text="@string/date_updated"
+                style="@style/textviewheading"/>
+
+            <TextView
+                android:id="@+id/dateUpdated"
+                android:text="@string/number_holder"
+                style="@style/textviewdescription"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

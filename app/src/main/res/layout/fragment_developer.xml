@@ -1,14 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools">
+
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/regionbg"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".ui.fragments.Developer">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_horizontal"
+        android:text="@string/passion_persistence_patience"
+        android:textSize="12sp"
+        android:textStyle="bold" />
 
-</FrameLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="25dp"
+        android:contentDescription="@string/developerimage"
+        android:elevation="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mose"
+        app:civ_border_color="#000000"
+        tools:targetApi="lollipop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/github"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/elavation_background"
+            android:elevation="5dp"
+            android:orientation="horizontal"
+            tools:targetApi="lollipop">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:src="@drawable/github" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:text="@string/github" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linkedIn"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/elavation_background"
+            android:elevation="5dp"
+            android:orientation="horizontal"
+            tools:targetApi="lollipop">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:src="@drawable/linkedin"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:text="@string/linkedIn"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/medium"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/elavation_background"
+            android:elevation="5dp"
+            android:orientation="horizontal"
+            tools:targetApi="lollipop">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:src="@drawable/medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:text="@string/medium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gmail"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/elavation_background"
+            android:elevation="5dp"
+            android:orientation="horizontal"
+            tools:targetApi="lollipop">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:src="@drawable/gmail"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:text="@string/gmail"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+</layout>
