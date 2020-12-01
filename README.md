@@ -34,7 +34,7 @@ The link to this app can be downloaded here : <a href ="https://drive.google.com
   <li>This app is written 100% in kotlin</li>
   <li>Android Jetpack components used include</li>
     <ul>
-      <li>Data BInding - removes many UI framework calls in your activities, making them simpler and easier to maintain.
+      <li>Data BInding - removes many UI framework calls in activities, making them simpler and easier to maintain.
                         It also improve the app's performance and preventing memory leaks and null pointer exceptions
       </li>
       <li>
