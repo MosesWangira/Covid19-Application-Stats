@@ -13,23 +13,18 @@ It displays<br>
 The link to this app can be downloaded here : <a href ="https://drive.google.com/file/d/1DEE2FvTC9EQTGB-Rikq1TWEh1LokQ-xw/view?usp=sharing">Click here to download</a>
 
 ## App visual images
-#### splash screen
+### splash screen
 <img src = "images/splash.png" width = "300"/>
-<br>
 
-#### summary
+### summary
 <img src = "images/summary.png" width = "300"/>
-<br>
 
-#### countries
+### countries
 <img src = "images/regions.png" width = "300"/>
-<br>
 
-#### Filtered search in countries
+### Filtered search in countries
 <img src = "images/filtered%20search.png" width = "300"/>
-<br>
 
-#### prevention
+### prevention
 <img src = "images/prevention.png" width = "300"/>
-<br>
 
