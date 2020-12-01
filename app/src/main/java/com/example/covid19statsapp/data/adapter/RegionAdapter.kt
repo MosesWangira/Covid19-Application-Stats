@@ -7,13 +7,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.covid19statsapp.R
 import com.example.covid19statsapp.data.model.CountryInfo
+import com.example.covid19statsapp.data.model.DataClass
 import com.example.covid19statsapp.data.model.DataClassItem
 import com.example.covid19statsapp.util.convertMillisToFormattedDate
 import kotlinx.android.synthetic.main.recycler_item.view.*
 
 class RegionAdapter(val items: List<DataClassItem>) :
     RecyclerView.Adapter<RegionAdapter.StatisticsViewHolder>() {
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = StatisticsViewHolder(
         LayoutInflater.from(parent.context).inflate(
