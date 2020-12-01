@@ -43,12 +43,11 @@ The link to this app can be downloaded here : <a href ="https://drive.google.com
     </ul>
   <li><a href ="https://square.github.io/retrofit/">Retrofit</a> -  retrieving JSON via a REST based webservice.</li>
   <li>Material Design -  Build a nice looking UI.</li>
-</ul
+</ul>
  
- <br>
   
 ## Installation
-You need a laptop and latest release of android studio(preffered)
+You need a laptop and latest release of android studio(preferred)
 
 ## Usage
 Clone this project using this link <a href = "https://github.com/MosesWangira/Covid.git">https://github.com/MosesWangira/Covid.git</a><br>
