@@ -51,7 +51,7 @@ The link to this app can be downloaded here : <a href ="https://drive.google.com
 You need a laptop and latest release of android studio(preffered)
 
 ## Usage
-Clone this project using this link <a href = "https://github.com/MosesWangira/Covid.git">https://github.com/MosesWangira/Covid.git</a>
+Clone this project using this link <a href = "https://github.com/MosesWangira/Covid.git">https://github.com/MosesWangira/Covid.git</a><br>
 Open the project using android studio
 
 
