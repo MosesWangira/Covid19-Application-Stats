@@ -27,4 +27,28 @@ The link to this app can be downloaded here : <a href ="https://drive.google.com
 
 ### prevention
 <img src = "images/prevention.png" width = "300"/>
+<br>
+
+## Tools and Libraries used
+<ul>
+  <li>This app is written 100% in kotlin</li>
+  <li>Android Jetpack components used include</li>
+    <ul>
+      <li>Data BInding - removes many UI framework calls in your activities, making them simpler and easier to maintain.
+                        It also improve the app's performance and preventing memory leaks and null pointer exceptions
+      </li>
+      <li>
+        Navigation - ensures a consistent and predictable user experience by adhering to an established set of principles.
+      </li>
+    </ul>
+  <li><a href ="https://square.github.io/retrofit/">Retrofit</a> -  retrieving JSON via a REST based webservice.</li>
+  <li>Material Design -  Build a nice looking UI.</li>
+</ul
+  
+## Installation
+You need a laptop and latest release of android studio(preffered)
+
+## Usage
+Clone this project using this link <a href '"></a>
+
 
