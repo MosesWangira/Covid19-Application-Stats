@@ -17,7 +17,7 @@ The link to this app can be downloaded here : <a href ="https://drive.google.com
 <img src = "images/splash.png" width = "300"/>
 
 ### summary
-<img src = "images/summary.png" width = "300"/>
+<img src = "images/summary.png" width = "300"/> <img src = "images/nonet.png" width = "300"/>
 
 ### countries
 <img src = "images/regions.png" width = "300"/> <img src = "images/filtered%20search.png" width = "300"/>
